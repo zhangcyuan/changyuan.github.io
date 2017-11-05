@@ -66,7 +66,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="docker,docker安装," />
 
 
 
@@ -77,17 +77,18 @@
 
 
 
-<meta name="description" content="开始博客生活，java开发,java">
+<meta name="description" content="docker支持目前主流的操作系统，如Ubuntu、CentOS、Windows、MacOS等,Linux系统体验最好  UbuntuUbuntu14.04用自带docker.io安装(版本会稍旧)   1234sudo apt-get updatesudo apt-get install -y docker.iosudo ln -sf /usr/bin/docker.io /usr/local">
+<meta name="keywords" content="docker,docker安装">
 <meta property="og:type" content="article">
-<meta property="og:title" content="docke02">
+<meta property="og:title" content="二、docker的安装">
 <meta property="og:url" content="https://zhangcyuan.github.io/2017/11/05/docker02/index.html">
 <meta property="og:site_name" content="关照万物的博客">
-<meta property="og:description" content="开始博客生活，java开发,java">
+<meta property="og:description" content="docker支持目前主流的操作系统，如Ubuntu、CentOS、Windows、MacOS等,Linux系统体验最好  UbuntuUbuntu14.04用自带docker.io安装(版本会稍旧)   1234sudo apt-get updatesudo apt-get install -y docker.iosudo ln -sf /usr/bin/docker.io /usr/local">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-11-05T12:54:56.757Z">
+<meta property="og:updated_time" content="2017-11-05T16:34:10.377Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="docke02">
-<meta name="twitter:description" content="开始博客生活，java开发,java">
+<meta name="twitter:title" content="二、docker的安装">
+<meta name="twitter:description" content="docker支持目前主流的操作系统，如Ubuntu、CentOS、Windows、MacOS等,Linux系统体验最好  UbuntuUbuntu14.04用自带docker.io安装(版本会稍旧)   1234sudo apt-get updatesudo apt-get install -y docker.iosudo ln -sf /usr/bin/docker.io /usr/local">
 
 
 
@@ -123,7 +124,7 @@
 
 
 
-  <title>docke02 | 关照万物的博客</title>
+  <title>二、docker的安装 | 关照万物的博客</title>
   
 
 
@@ -301,7 +302,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">docke02</h1>
+          <h1 class="post-title" itemprop="name headline">二、docker的安装</h1>
         
 
         <div class="post-meta">
@@ -313,7 +314,7 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-11-05T20:54:56+08:00">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-11-05T23:03:07+08:00">
                 2017-11-05
               </time>
             
@@ -323,6 +324,28 @@
             
           </span>
 
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/docker/" itemprop="url" rel="index">
+                    <span itemprop="name">docker</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -351,7 +374,41 @@
       
 
       
-        
+        <ul>
+<li><p>docker支持目前主流的操作系统，如Ubuntu、CentOS、Windows、MacOS等,Linux系统体验最好</p>
+</li>
+<li><h1 id="Ubuntu"><a href="#Ubuntu" class="headerlink" title="Ubuntu"></a>Ubuntu</h1><p>Ubuntu14.04用自带docker.io安装(版本会稍旧)</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">sudo apt-get update</div><div class="line">sudo apt-get install -y docker.io</div><div class="line">sudo ln -sf /usr/bin/docker.io /usr/local/bin/docker</div><div class="line">sudo sed -i &apos;$acomplete -F _docker docker&apos; /etc/bash_completion.d/docker.io</div></pre></td></tr></table></figure>
+<p>安装最新版本</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">//先安装apt-transport-https</div><div class="line">sudo apt-get install apt-transport-https</div><div class="line">sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 36A1D786924C8950F966E92D8576A8BA88D21E9</div><div class="line">sudo bash -c &quot;echo deb https://get.docker.io/ubuntu docker main &gt; /etc/apt/sources.list.d/docker.list&quot;</div><div class="line">suco apt-get update</div><div class="line">//再安装docker</div><div class="line">sudo apt-get install -y lxc-docker</div><div class="line">//如果要升级的话</div><div class="line">sudo apt-get update -y lxc-docker</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<ul>
+<li><h1 id="CentOS"><a href="#CentOS" class="headerlink" title="CentOS"></a>CentOS</h1><p>CentOS6及以后版本</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">sudo yum install -y http://mirrors.yun.idc.com/epel/6/i386/epel-release-6-8.noarch.rpm</div><div class="line">sudo yum install -y docker-io</div></pre></td></tr></table></figure>
+<p>CentOS7</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo yum install -y docker</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<ul>
+<li><h1 id="Windows"><a href="#Windows" class="headerlink" title="Windows"></a>Windows</h1><ol>
+<li>下载Docker for Windows Installer，地址：<a href="https://github.com/boot2docker/windows-installer/releases/latest" target="_blank" rel="external">https://github.com/boot2docker/windows-installer/releases/latest</a></li>
+<li>运行Installer,整个过程将安装VirtualBox,MSYS-git,boot2docker Linux ISO镜像以及Boot2Docker管理工具</li>
+<li>打开Boot2Dokcer Start程序，第一次运行需要输入一个SSH Key passphrase，用于SSH密钥生成口令</li>
+<li>Boot2Docker Start将连接到Shell会话,Docker已经运行</li>
+</ol>
+</li>
+<li><h1 id="MacOs"><a href="#MacOs" class="headerlink" title="MacOs"></a>MacOs</h1><ol>
+<li>下载Docker for OS X Installer,地址：<a href="https://docs.docker.com/installation/mac/" target="_blank" rel="external">https://docs.docker.com/installation/mac/</a></li>
+<li>运行安装包</li>
+<li>安装成功后打开Boot2Docker进行初始化<pre><code>boot2docker init
+boot2docker start
+$(boot2docker shellinit)
+</code></pre></li>
+</ol>
+</li>
+</ul>
+
       
     </div>
     
@@ -365,6 +422,14 @@
     
 
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/docker/" rel="tag"># docker</a>
+          
+            <a href="/tags/docker安装/" rel="tag"># docker安装</a>
+          
+        </div>
       
 
       
@@ -384,6 +449,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/11/06/docker03/" rel="prev" title="三、docker镜像">
+                三、docker镜像 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -435,8 +504,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -451,7 +529,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -462,7 +540,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-count">2</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -473,7 +551,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">6</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -498,6 +576,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Ubuntu"><span class="nav-number">1.</span> <span class="nav-text">Ubuntu</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#CentOS"><span class="nav-number">2.</span> <span class="nav-text">CentOS</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Windows"><span class="nav-number">3.</span> <span class="nav-text">Windows</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#MacOs"><span class="nav-number">4.</span> <span class="nav-text">MacOs</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       

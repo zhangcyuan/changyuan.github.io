@@ -1,14 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[docke02]]></title>
+    <title><![CDATA[初步接触Chrome扩展应用开发]]></title>
+    <url>%2F2017%2F11%2F06%2Fchrome01%2F</url>
+    <content type="text"><![CDATA[Chrome是Google公司基于WebKit开发的一款浏览器1，但从某种角度上来说它已经超越了浏览器成为了一个平台甚至是一个操作系统。Chrome继承了WebKit内核对HTML的高速渲染，同时Google自行开发的V8引擎使得JavaScript在Chrome中的执行效率大幅提升，这使得更加高级复杂的JavaScript程序在Chrome中运行成为可能。 1 Chrome 28之后使用的Blink渲染引擎是WebKit中WebCore组件的一个分支。 Chrome浏览器除了页面渲染速度快，JavaScript执行速度快以外，另一大特点就是支持开发者为其编写各种各样的扩展来扩充其功能，用HTML5编写桌面程序，这使得Chrome变得更加强大。编写这样的程序就是本书所要讲解的内容。 本章首先对Chrome扩展应用进行简单概述，之后带着读者编写一个简单的扩展，使读者对扩展的认识更加深入。在讲解扩展Manifest文件格式时，也会简单讲解一下JSON数据格式2，避免没有接触过JSON的读者阅读后续的内容产生困难。另外本章也用一小节简单讲解了一下DOM，这对从未接触过网页编程的读者会非常有帮助。 2 JSON(JavaScript Object Notation) 是一种轻量级的数据交换格式。]]></content>
+      <categories>
+        <category>chrome</category>
+      </categories>
+      <tags>
+        <tag>chrome</tag>
+        <tag>扩展程序</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[三、docker镜像]]></title>
+    <url>%2F2017%2F11%2F06%2Fdocker03%2F</url>
+    <content type="text"><![CDATA[从阿里云镜像仓库下载alpine镜像 1docker pull registry.cn-hangzhou.aliyuncs.com/acs-sample/alpine 查看docker所有的镜像 1docker images 给镜像取别名和换tag标示，默认的tag为镜像的版本号 1docker tag registry.cn-hangzhou.aliyuncs.com/acs-sample/alpine alpine:last 查看镜像的详细信息，可以通过唯一ID（一般输入前几位决定唯一即可）或者镜像名字和版本号查看 1docker inspect bf6 删除镜像，根据名字和版本是删除对于的那个镜像，根据唯一ID删除是删除整个物理文件，所有指向该物理文件的镜像都将删除 1docker rmi alpine:last]]></content>
+      <categories>
+        <category>docker</category>
+      </categories>
+      <tags>
+        <tag>docker</tag>
+        <tag>镜像</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[二、docker的安装]]></title>
     <url>%2F2017%2F11%2F05%2Fdocker02%2F</url>
-    <content type="text"></content>
+    <content type="text"><![CDATA[docker支持目前主流的操作系统，如Ubuntu、CentOS、Windows、MacOS等,Linux系统体验最好 UbuntuUbuntu14.04用自带docker.io安装(版本会稍旧) 1234sudo apt-get updatesudo apt-get install -y docker.iosudo ln -sf /usr/bin/docker.io /usr/local/bin/dockersudo sed -i &apos;$acomplete -F _docker docker&apos; /etc/bash_completion.d/docker.io 安装最新版本 123456789//先安装apt-transport-httpssudo apt-get install apt-transport-httpssudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 36A1D786924C8950F966E92D8576A8BA88D21E9sudo bash -c &quot;echo deb https://get.docker.io/ubuntu docker main &gt; /etc/apt/sources.list.d/docker.list&quot;suco apt-get update//再安装dockersudo apt-get install -y lxc-docker//如果要升级的话sudo apt-get update -y lxc-docker CentOSCentOS6及以后版本 12sudo yum install -y http://mirrors.yun.idc.com/epel/6/i386/epel-release-6-8.noarch.rpmsudo yum install -y docker-io CentOS7 1sudo yum install -y docker Windows 下载Docker for Windows Installer，地址：https://github.com/boot2docker/windows-installer/releases/latest 运行Installer,整个过程将安装VirtualBox,MSYS-git,boot2docker Linux ISO镜像以及Boot2Docker管理工具 打开Boot2Dokcer Start程序，第一次运行需要输入一个SSH Key passphrase，用于SSH密钥生成口令 Boot2Docker Start将连接到Shell会话,Docker已经运行 MacOs 下载Docker for OS X Installer,地址：https://docs.docker.com/installation/mac/ 运行安装包 安装成功后打开Boot2Docker进行初始化boot2docker init boot2docker start $(boot2docker shellinit)]]></content>
+      <categories>
+        <category>docker</category>
+      </categories>
+      <tags>
+        <tag>docker</tag>
+        <tag>docker安装</tag>
+      </tags>
   </entry>
   <entry>
     <title><![CDATA[一、认识docker]]></title>
     <url>%2F2017%2F11%2F05%2Fdocker01%2F</url>
-    <content type="text"><![CDATA[docker诞生于2013年初，dotCloud公司用Go语言开发的开源项目 主要目的：一次封装，到处运行（对应用组件的封装、分发、部署、运行） Linux容器到Docker容器体现了容器技术与思维的进步 Docker容器类似沙盒，每个容器进行隔离，也可以通信，创建和停止非常快速 好处：更快的交付和部署、更高效的资源利用、 更轻松的迁移和扩展、更简单的更新管理 Docker比虚拟机的优势 特性 容器 虚拟机 启动速度 秒级 分钟级 硬盘使用 MB GB 性能 接近原生 弱于 系统支持量 上千个 一般几十个 隔离性 安全隔离 完全隔离 Docker容器在操作系统层面实现虚拟化，直接服用本机操作系统 核心概念 Docker镜像：类似虚拟机镜像，一个面向Docker引擎的制度模板，保护文件系统。创建Docker容器的基础 Docker容器：类似轻量级沙箱，Docker利用容器来运行和隔离运用 Docker仓库：类似代码仓库，用于存放镜像文件，设计理念与Git非常相似]]></content>
+    <content type="text"><![CDATA[docker诞生于2013年初，dotCloud公司用Go语言开发的开源项目 主要目的：一次封装，到处运行（对应用组件的封装、分发、部署、运行） Linux容器到Docker容器体现了容器技术与思维的进步 Docker容器类似沙盒，每个容器进行隔离，也可以通信，创建和停止非常快速 好处：更快的交付和部署、更高效的资源利用、 更轻松的迁移和扩展、更简单的更新管理 Docker比虚拟机的优势 特性 容器 虚拟机 启动速度 秒级 分钟级 硬盘使用 MB GB 性能 接近原生 弱于 系统支持量 上千个 一般几十个 隔离性 安全隔离 完全隔离 Docker容器在操作系统层面实现虚拟化，直接复用本机操作系统 核心概念 Docker镜像：类似虚拟机镜像，一个面向Docker引擎的制度模板，保护文件系统。创建Docker容器的基础 Docker容器：类似轻量级沙箱，Docker利用容器来运行和隔离运用 Docker仓库：类似代码仓库，用于存放镜像文件，设计理念与Git非常相似]]></content>
       <categories>
         <category>docker</category>
       </categories>
@@ -16,11 +47,6 @@
         <tag>docker</tag>
         <tag>理论</tag>
       </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[初步接触Chrome扩展应用开发]]></title>
-    <url>%2F2017%2F11%2F02%2Fchrome01%2F</url>
-    <content type="text"><![CDATA[Chrome是Google公司基于WebKit开发的一款浏览器1，但从某种角度上来说它已经超越了浏览器成为了一个平台甚至是一个操作系统。Chrome继承了WebKit内核对HTML的高速渲染，同时Google自行开发的V8引擎使得JavaScript在Chrome中的执行效率大幅提升，这使得更加高级复杂的JavaScript程序在Chrome中运行成为可能。 1 Chrome 28之后使用的Blink渲染引擎是WebKit中WebCore组件的一个分支。 Chrome浏览器除了页面渲染速度快，JavaScript执行速度快以外，另一大特点就是支持开发者为其编写各种各样的扩展来扩充其功能，用HTML5编写桌面程序，这使得Chrome变得更加强大。编写这样的程序就是本书所要讲解的内容。 本章首先对Chrome扩展应用进行简单概述，之后带着读者编写一个简单的扩展，使读者对扩展的认识更加深入。在讲解扩展Manifest文件格式时，也会简单讲解一下JSON数据格式2，避免没有接触过JSON的读者阅读后续的内容产生困难。另外本章也用一小节简单讲解了一下DOM，这对从未接触过网页编程的读者会非常有帮助。 2 JSON(JavaScript Object Notation) 是一种轻量级的数据交换格式。]]></content>
   </entry>
   <entry>
     <title><![CDATA[Hello World]]></title>
