@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[linux目录结构]]></title>
+    <url>%2F2017%2F11%2F29%2Flinux02%2F</url>
+    <content type="text"><![CDATA[经典树形结构 /etc目录说明]]></content>
+      <categories>
+        <category>linux</category>
+      </categories>
+      <tags>
+        <tag>linux</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[linux命令]]></title>
     <url>%2F2017%2F11%2F28%2Flinux01%2F</url>
     <content type="text"><![CDATA[lspci命令列出所有的PCI设备（主板、声卡、显卡、网卡等） lspci 查看CPU信息 more /proc/cpuinfo 查看系统物理CPU的个数 cat /proc/cpuinfo |grep “physical id” | sort | uniq |wc -l 查看每个物理CPU内核的个数 cat /proc/cpuinfo |grep “cpu cores” 查看系统所有逻辑CPU个数（所有物理CPU中内核的个数加上超线程个数） cat /proc/cpuinfo |grep “processor” | wc -l 查看内存信息 more /proc/meminfo 查看磁盘分区信息 fdisk -l 设备挂载命令 mount -t 文件系统类型设备名挂载点 挂载软盘 mount -t msdos /dev/fd0 /mnt/floppy 查看U盘设备名 dmesg|more 挂载U盘 mount -t vfat /dev/sdal /mnt/usb 挂载光盘 mount /dev/cdrom /mnt/cdrom 卸载设备 umount 挂载目录 卸载U盘 umount /mnt/usb 卸载光盘 umount /mnt/cdrom]]></content>
