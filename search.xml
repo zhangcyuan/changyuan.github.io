@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[linux命令]]></title>
+    <url>%2F2017%2F11%2F28%2Flinux01%2F</url>
+    <content type="text"><![CDATA[lspci命令列出所有的PCI设备（主板、声卡、显卡、网卡等） lspci 查看CPU信息 more /proc/cpuinfo 查看系统物理CPU的个数 cat /proc/cpuinfo |grep “physical id” | sort | uniq |wc -l 查看每个物理CPU内核的个数 cat /proc/cpuinfo |grep “cpu cores” 查看系统所有逻辑CPU个数（所有物理CPU中内核的个数加上超线程个数） cat /proc/cpuinfo |grep “processor” | wc -l 查看内存信息 more /proc/meminfo 查看磁盘分区信息 fdisk -l 设备挂载命令 mount -t 文件系统类型设备名挂载点 挂载软盘 mount -t msdos /dev/fd0 /mnt/floppy 查看U盘设备名 dmesg|more 挂载U盘 mount -t vfat /dev/sdal /mnt/usb 挂载光盘 mount /dev/cdrom /mnt/cdrom 卸载设备 umount 挂载目录 卸载U盘 umount /mnt/usb 卸载光盘 umount /mnt/cdrom]]></content>
+      <categories>
+        <category>linux</category>
+      </categories>
+      <tags>
+        <tag>linux</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[初步接触Chrome扩展应用开发]]></title>
     <url>%2F2017%2F11%2F06%2Fchrome01%2F</url>
     <content type="text"><![CDATA[Chrome是Google公司基于WebKit开发的一款浏览器1，但从某种角度上来说它已经超越了浏览器成为了一个平台甚至是一个操作系统。Chrome继承了WebKit内核对HTML的高速渲染，同时Google自行开发的V8引擎使得JavaScript在Chrome中的执行效率大幅提升，这使得更加高级复杂的JavaScript程序在Chrome中运行成为可能。 1 Chrome 28之后使用的Blink渲染引擎是WebKit中WebCore组件的一个分支。 Chrome浏览器除了页面渲染速度快，JavaScript执行速度快以外，另一大特点就是支持开发者为其编写各种各样的扩展来扩充其功能，用HTML5编写桌面程序，这使得Chrome变得更加强大。编写这样的程序就是本书所要讲解的内容。 本章首先对Chrome扩展应用进行简单概述，之后带着读者编写一个简单的扩展，使读者对扩展的认识更加深入。在讲解扩展Manifest文件格式时，也会简单讲解一下JSON数据格式2，避免没有接触过JSON的读者阅读后续的内容产生困难。另外本章也用一小节简单讲解了一下DOM，这对从未接触过网页编程的读者会非常有帮助。 2 JSON(JavaScript Object Notation) 是一种轻量级的数据交换格式。]]></content>
@@ -45,7 +56,6 @@
       </categories>
       <tags>
         <tag>docker</tag>
-        <tag>理论</tag>
       </tags>
   </entry>
   <entry>
