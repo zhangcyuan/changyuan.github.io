@@ -66,7 +66,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="linux," />
 
 
 
@@ -77,16 +77,21 @@
 
 
 
-<meta name="description" content="开始博客生活，java开发,java">
-<meta property="og:type" content="website">
-<meta property="og:title" content="光照万物的博客">
-<meta property="og:url" content="https://zhangcyuan.github.io/archives/2017/index.html">
+<meta name="description" content="RHEL7软件包管理 主要有RPM 和 YUM两种包管理 YUM使用简单但需要联网，YUM会去网上的YUM包源去获取所需要的软件包 RPM需要炒作精度比较细，需要我们做的事情比较多 redhat package manager umount /dev/sr0 卸载 mount /dev/dr0  /mnt/  挂载 rpm包名字结构  rpm zsh-5.0.2-7.el7.x86_64.rp">
+<meta name="keywords" content="linux">
+<meta property="og:type" content="article">
+<meta property="og:title" content="linux-RHEL7软件包管理">
+<meta property="og:url" content="https://zhangcyuan.github.io/2017/12/03/linux04/index.html">
 <meta property="og:site_name" content="光照万物的博客">
-<meta property="og:description" content="开始博客生活，java开发,java">
+<meta property="og:description" content="RHEL7软件包管理 主要有RPM 和 YUM两种包管理 YUM使用简单但需要联网，YUM会去网上的YUM包源去获取所需要的软件包 RPM需要炒作精度比较细，需要我们做的事情比较多 redhat package manager umount /dev/sr0 卸载 mount /dev/dr0  /mnt/  挂载 rpm包名字结构  rpm zsh-5.0.2-7.el7.x86_64.rp">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://i.imgur.com/dmHSncH.jpg">
+<meta property="og:image" content="https://i.imgur.com/g2453uv.jpg">
+<meta property="og:updated_time" content="2017-12-03T14:43:09.900Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="光照万物的博客">
-<meta name="twitter:description" content="开始博客生活，java开发,java">
+<meta name="twitter:title" content="linux-RHEL7软件包管理">
+<meta name="twitter:description" content="RHEL7软件包管理 主要有RPM 和 YUM两种包管理 YUM使用简单但需要联网，YUM会去网上的YUM包源去获取所需要的软件包 RPM需要炒作精度比较细，需要我们做的事情比较多 redhat package manager umount /dev/sr0 卸载 mount /dev/dr0  /mnt/  挂载 rpm包名字结构  rpm zsh-5.0.2-7.el7.x86_64.rp">
+<meta name="twitter:image" content="https://i.imgur.com/dmHSncH.jpg">
 
 
 
@@ -116,13 +121,13 @@
 
 
 
-  <link rel="canonical" href="https://zhangcyuan.github.io/archives/2017/"/>
+  <link rel="canonical" href="https://zhangcyuan.github.io/2017/12/03/linux04/"/>
 
 
 
 
 
-  <title>归档 | 光照万物的博客</title>
+  <title>linux-RHEL7软件包管理 | 光照万物的博客</title>
   
 
 
@@ -141,7 +146,7 @@
     
   
 
-  <div class="container sidebar-position-left page-archive">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -269,411 +274,260 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block archive">
-    <div id="posts" class="posts-collapse">
-      <span class="archive-move-on"></span>
+  <div id="posts" class="posts-expand">
+    
 
-      <span class="archive-page-counter">
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://zhangcyuan.github.io/2017/12/03/linux04/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="mr_zhang">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="光照万物的博客">
+    </span>
+
+    
+      <header class="post-header">
+
         
         
+          <h1 class="post-title" itemprop="name headline">linux-RHEL7软件包管理</h1>
         
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-12-03T19:24:52+08:00">
+                2017-12-03
+              </time>
+            
+
+            
+
+            
+          </span>
+
           
-        
-        嗯..! 目前共计 11 篇日志。 继续努力。
-      </span>
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/linux/" itemprop="url" rel="index">
+                    <span itemprop="name">linux</span>
+                  </a>
+                </span>
 
-      
-
-        
-        
-        
-
-        
+                
+                
+              
+            </span>
           
-          <div class="collection-title">
-            <h1 class="archive-year" id="archive-year-2017">2017</h1>
-          </div>
-        
-        
 
-        
+          
+            
+          
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+          
+          
 
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2017/12/03/linux04/" itemprop="url">
-              
-                <span itemprop="name">linux-RHEL7软件包管理</span>
-              
-            </a>
-        
-      </h2>
+          
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-12-03T19:24:52+08:00"
-              content="2017-12-03" >
-          12-03
-        </time>
-      </div>
+          
 
-    </header>
-  </article>
+          
 
+        </div>
+      </header>
+    
 
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2017/12/02/Nginx/" itemprop="url">
-              
-                <span itemprop="name">未命名</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-12-02T16:42:31+08:00"
-              content="2017-12-02" >
-          12-02
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
       
 
-        
-        
-        
+      
+        <h1 id="RHEL7软件包管理"><a href="#RHEL7软件包管理" class="headerlink" title="RHEL7软件包管理"></a>RHEL7软件包管理</h1><ul>
+<li>主要有RPM 和 YUM两种包管理</li>
+<li>YUM使用简单但需要联网，YUM会去网上的YUM包源去获取所需要的软件包</li>
+<li>RPM需要炒作精度比较细，需要我们做的事情比较多 redhat package manager</li>
+<li>umount /dev/sr0 卸载</li>
+<li>mount /dev/dr0  /mnt/  挂载</li>
+<li>rpm包名字结构<br>  rpm zsh-5.0.2-7.el7.x86_64.rp<br>  zsh        -5        .0        .2        -el7        x86            64<br>  软件名    主版本号    次版本号 修订号    RHEL7    cpu架构平台    支持系统位数 </li>
+<li>安装rpm软件<br>  -i –install 安装软件包<br>  –nodeps        不验证软件包依赖<br>  -v –verbose        提供更多的详细信息输出<br>  -h –hash        软件包安装的时候列出的哈希标记</li>
+<li>rpm -ivh zsh-5.0.2-7.el7.x86_64.rpm</li>
+<li>yum install mariadb-server-5.5.35-3.el7.x86_64.rpm<br>  自动安装依赖</li>
+<li>到rpm包相关的网站去下载软件包<br>  rpmfind.net<br>  rpm.pbone.net<br>  rpmseek.com/index.html</li>
+<li>rpm查询功能<br>  rmp    -qa….<br>  -a    查询所有已安装的软件包<br>  -f    查询文件所属软件包<br>  -p    查询软件包 通常用来看下还未安装的软件包<br>  -i    显示软件包信息<br>  -l    显示软件包中的文件列表<br>  -d    显示被标注为文档的文件列表<br>  -c    显示被标注为配置文件的文件列表<br>  通常可以配合官道| more使用，让内容更容易读</li>
+<li>rpm -qf <code>which zsh</code>  </li>
+<li>rpm -e zsh            卸载包</li>
+</ul>
+<h3 id="使用yum安装软件"><a href="#使用yum安装软件" class="headerlink" title="使用yum安装软件"></a>使用yum安装软件</h3><ul>
+<li>yum解决依赖关系问题，自动下载软件包，基于C/S架构。</li>
+<li><p>配置yum源的配置文件</p>
+<p> <img src="https://i.imgur.com/dmHSncH.jpg" alt=""></p>
+</li>
+<li>yum clean all        清空yum缓存</li>
+<li>yum list    生成列表</li>
+<li>yum主要操作<br>  安装   yum install -y<br>  检测升级    yum check-update<br>  升级    yum update<br>  软件包查询    yum    list<br>  软件包信息    yum info<br>  卸载        yum remove httpd -y<br>  帮助        yum –help      man yum<br>  查看包组        yum grouplist<br>  包组安装        yum groupinstall xxx -y<h3 id="源码编译安装软件包"><a href="#源码编译安装软件包" class="headerlink" title="源码编译安装软件包"></a>源码编译安装软件包</h3>  优点：可以安装最新版本，灵活自己定义安装参数，比如制定安装目录和支持某些库</li>
+<li><p>解压解包<br>  tar -zxvf 源代码包<br>  x为解包，z为解压（仅适合gzip，  j 适合bz2）  v显示过程  f 制定被解压包名</p>
+</li>
+<li><p>配置<br>  进入解压后的目录，用 ./configure [–prefix=/usr/local/name]来配置，这个过程主要收集系统信息，设置安装目录等。<br>  卸载只需将这个目录删除即可</p>
+</li>
+<li>编译：将源代码编译可以执行的二进制文件<br>  make -j 4<br>  -j 4 表示4个进程同时编译，速度快，-j后面的数字为CPU的核数</li>
+<li><p>安装 make install</p>
+</li>
+<li><p>安装nginx</p>
+<p><img src="https://i.imgur.com/g2453uv.jpg" alt=""></p>
+</li>
+<li><p>检查端口时是否启动<br>  netstat -antup| grep 80</p>
+</li>
+</ul>
+<h3 id="文档贵点和压缩"><a href="#文档贵点和压缩" class="headerlink" title="文档贵点和压缩"></a>文档贵点和压缩</h3><ul>
+<li>文档归档命令 tar</li>
+</ul>
+<ul>
+<li>压缩命令</li>
+<li>txt passwd  文本文件压缩后很省空间</li>
+<li>jpeg avi  压缩后可能占更大空间<br>  原因是图片和视频本身就是压缩格式文件</li>
+<li>tar命令<br>  打包 tar 选项 包的名称  目标文件/目录<br>  tar cvf name.tar /boot/fold/<br>  c create创建<br>  v 详细<br>  f filename</li>
+<li>file命令<br>  file命令查询文件类型,linux不以文件后缀名识别文件类型<br>  file a.txt</li>
+<li>将两个目录或目标+文件打包成一个软件包<br>  tar -cvf aa.tar /boot/  /etc/passwd</li>
+<li>不解包查看压缩包内容<br>  tar tvf t.tar</li>
+<li>解压<br>  tar xvf t.tar<br>  tar xvf b.tar -C /ect/</li>
+<li>查看文件夹大小<br>  du -sh /boot/</li>
+<li>查看文件大小<br>  ll - h t.tar</li>
+<li>归档和压缩<br>  gzip  bzip2  zip tar </li>
+<li><p>压缩格式  gz  bz2   xz zip Z<br>  压缩包.tar.gz    压缩包.tgz<br>  压缩: tar zcvf newfile.tar.gz source<br>  解压： rar zxvf file.tar.gz -C /usr/local/</p>
+<p>  压缩包.bz2<br>  压缩：tar jcvf newfile.tar.bz2  source<br>  解压：tar jxvf file.tar.tar.bz2 -C 、usr/local/</p>
+</li>
+</ul>
+<pre><code>压缩包.zip  unzip
+压缩问价：zip passwd.zip /usr/local/
+压缩目录：zip -r t.zip /usr/local/ 
+解压：unzip z.zip -d /usr/  -d 指定解压目录
 
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2017/12/02/linux03/" itemprop="url">
-              
-                <span itemprop="name">linux笔记</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-12-02T16:24:52+08:00"
-              content="2017-12-02" >
-          12-02
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
+压缩：
+    gzip 文件
+    bzip2  文件
+    xz    文件
+解压：
+    gzip -d 文件
+    bzip2 -d 文件
+    xz -d 文件    或   unxz -d  文件
+查看：zcat     bzcat  xcat
+</code></pre><ul>
+<li>对比大小<br>  ll -h t.tar*</li>
+</ul>
+<h2 id="进程管理命令pst和top使用方法"><a href="#进程管理命令pst和top使用方法" class="headerlink" title="进程管理命令pst和top使用方法"></a>进程管理命令pst和top使用方法</h2><ul>
+<li>ps top 管理进程<br>  ps为我们提供进程的一次性的查看，它所提供的查看结果并不动态连续的，如果想对进程时间监控，可以用top工具</li>
+<li>ps监视进程工具<br>  静态  当前状态<br>  ps常用参数<br>  -l 长格式输出<br>  <strong>-u 按用户名和启动时间的顺序来显示进程</strong><br>  -f 用树形格式来显示进程<br>  <strong>-a 显示所有用的所有进程</strong><br>  -r 显示运行中的进程<br>  -e 显示所有进程，包括没有控制终端的进程<br>  -x 显示没有控制终端的进程<br>  -aux  常用，用BSD的格式显示进程<br>  -ef    用标注格式显示进程</li>
+<li>列出目前所有正在使用内存中的进程<br>  ps -aux</li>
+<li><p>进程属性<br>  USER 进程所属用户<br>  PID 进程ID<br>  PPID 父进程<br>  %CPU 占用CPU百分比<br>  %MEM 占用内存百分比<br>  NI    进程的NICE值  优先级大小<br>  VSZ    进程占用虚拟内存大小<br>  RSS    固定内存使用数量<br>  TYY    进程启动的终端ID<br>  STAT 进程的状态  </p>
+<pre><code>R    正在运行中的
+S    处于休眠状态
+T    停止或被追踪
+Z    僵尸进程
+N    优先级较低的进程
+L    有些页被缩进内存
+s    进程的领导者  它下面有子进程
+</code></pre><p>  START 启动进程的时间<br>  TIME 进程消耗CPu的时间<br>  COMMAND    命令的名称和参数</p>
+</li>
+<li><p>top统计信息区前5行是系统整体的统计信息</p>
+</li>
+</ul>
+<h3 id="kill和进程优先级管理"><a href="#kill和进程优先级管理" class="headerlink" title="kill和进程优先级管理"></a>kill和进程优先级管理</h3><ul>
+<li>一个存放内存中的特殊目录 /proc<br>  这个目录比较特殊，它并不在我们磁盘上，而在我们的内存中，当前系统运行的所有进程都动态的存放在这个目录</li>
+</ul>
 
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2017/11/30/hexo/" itemprop="url">
-              
-                <span itemprop="name">hexo常用命令</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-11-30T20:24:52+08:00"
-              content="2017-11-30" >
-          11-30
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2017/11/29/linux02/" itemprop="url">
-              
-                <span itemprop="name">linux目录结构</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-11-29T20:24:52+08:00"
-              content="2017-11-29" >
-          11-29
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2017/11/28/linux01/" itemprop="url">
-              
-                <span itemprop="name">linux命令</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-11-28T20:24:52+08:00"
-              content="2017-11-28" >
-          11-28
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2017/11/06/chrome01/" itemprop="url">
-              
-                <span itemprop="name">初步接触Chrome扩展应用开发</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-11-06T02:02:59+08:00"
-              content="2017-11-06" >
-          11-06
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2017/11/06/docker03/" itemprop="url">
-              
-                <span itemprop="name">三、docker镜像</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-11-06T01:02:59+08:00"
-              content="2017-11-06" >
-          11-06
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2017/11/05/docker02/" itemprop="url">
-              
-                <span itemprop="name">二、docker的安装</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-11-05T23:03:07+08:00"
-              content="2017-11-05" >
-          11-05
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2017/11/05/docker01/" itemprop="url">
-              
-                <span itemprop="name">一、认识docker</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-11-05T20:24:52+08:00"
-              content="2017-11-05" >
-          11-05
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
     </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/linux/" rel="tag"># linux</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/12/02/Nginx/" rel="next" title="">
+                <i class="fa fa-chevron-left"></i> 
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
-
-  
-  <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/archives/2017/page/2/">2</a><a class="extend next" rel="next" href="/archives/2017/page/2/"><i class="fa fa-angle-right"></i></a>
-  </nav>
+  </article>
 
 
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -681,6 +535,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -701,8 +559,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -764,6 +631,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#RHEL7软件包管理"><span class="nav-number">1.</span> <span class="nav-text">RHEL7软件包管理</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#使用yum安装软件"><span class="nav-number">1.0.1.</span> <span class="nav-text">使用yum安装软件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#源码编译安装软件包"><span class="nav-number">1.0.2.</span> <span class="nav-text">源码编译安装软件包</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#文档贵点和压缩"><span class="nav-number">1.0.3.</span> <span class="nav-text">文档贵点和压缩</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#进程管理命令pst和top使用方法"><span class="nav-number">1.1.</span> <span class="nav-text">进程管理命令pst和top使用方法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#kill和进程优先级管理"><span class="nav-number">1.1.1.</span> <span class="nav-text">kill和进程优先级管理</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -917,6 +800,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.3"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.3"></script>
+
+
 
   
 

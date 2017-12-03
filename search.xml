@@ -1,6 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[linux-RHEL7软件包管理]]></title>
+    <url>%2F2017%2F12%2F03%2Flinux04%2F</url>
+    <content type="text"><![CDATA[RHEL7软件包管理 主要有RPM 和 YUM两种包管理 YUM使用简单但需要联网，YUM会去网上的YUM包源去获取所需要的软件包 RPM需要炒作精度比较细，需要我们做的事情比较多 redhat package manager umount /dev/sr0 卸载 mount /dev/dr0 /mnt/ 挂载 rpm包名字结构 rpm zsh-5.0.2-7.el7.x86_64.rp zsh -5 .0 .2 -el7 x86 64 软件名 主版本号 次版本号 修订号 RHEL7 cpu架构平台 支持系统位数 安装rpm软件 -i –install 安装软件包 –nodeps 不验证软件包依赖 -v –verbose 提供更多的详细信息输出 -h –hash 软件包安装的时候列出的哈希标记 rpm -ivh zsh-5.0.2-7.el7.x86_64.rpm yum install mariadb-server-5.5.35-3.el7.x86_64.rpm 自动安装依赖 到rpm包相关的网站去下载软件包 rpmfind.net rpm.pbone.net rpmseek.com/index.html rpm查询功能 rmp -qa…. -a 查询所有已安装的软件包 -f 查询文件所属软件包 -p 查询软件包 通常用来看下还未安装的软件包 -i 显示软件包信息 -l 显示软件包中的文件列表 -d 显示被标注为文档的文件列表 -c 显示被标注为配置文件的文件列表 通常可以配合官道| more使用，让内容更容易读 rpm -qf which zsh rpm -e zsh 卸载包 使用yum安装软件 yum解决依赖关系问题，自动下载软件包，基于C/S架构。 配置yum源的配置文件 yum clean all 清空yum缓存 yum list 生成列表 yum主要操作 安装 yum install -y 检测升级 yum check-update 升级 yum update 软件包查询 yum list 软件包信息 yum info 卸载 yum remove httpd -y 帮助 yum –help man yum 查看包组 yum grouplist 包组安装 yum groupinstall xxx -y源码编译安装软件包 优点：可以安装最新版本，灵活自己定义安装参数，比如制定安装目录和支持某些库 解压解包 tar -zxvf 源代码包 x为解包，z为解压（仅适合gzip， j 适合bz2） v显示过程 f 制定被解压包名 配置 进入解压后的目录，用 ./configure [–prefix=/usr/local/name]来配置，这个过程主要收集系统信息，设置安装目录等。 卸载只需将这个目录删除即可 编译：将源代码编译可以执行的二进制文件 make -j 4 -j 4 表示4个进程同时编译，速度快，-j后面的数字为CPU的核数 安装 make install 安装nginx 检查端口时是否启动 netstat -antup| grep 80 文档贵点和压缩 文档归档命令 tar 压缩命令 txt passwd 文本文件压缩后很省空间 jpeg avi 压缩后可能占更大空间 原因是图片和视频本身就是压缩格式文件 tar命令 打包 tar 选项 包的名称 目标文件/目录 tar cvf name.tar /boot/fold/ c create创建 v 详细 f filename file命令 file命令查询文件类型,linux不以文件后缀名识别文件类型 file a.txt 将两个目录或目标+文件打包成一个软件包 tar -cvf aa.tar /boot/ /etc/passwd 不解包查看压缩包内容 tar tvf t.tar 解压 tar xvf t.tar tar xvf b.tar -C /ect/ 查看文件夹大小 du -sh /boot/ 查看文件大小 ll - h t.tar 归档和压缩 gzip bzip2 zip tar 压缩格式 gz bz2 xz zip Z 压缩包.tar.gz 压缩包.tgz 压缩: tar zcvf newfile.tar.gz source 解压： rar zxvf file.tar.gz -C /usr/local/ 压缩包.bz2 压缩：tar jcvf newfile.tar.bz2 source 解压：tar jxvf file.tar.tar.bz2 -C 、usr/local/ 压缩包.zip unzip 压缩问价：zip passwd.zip /usr/local/ 压缩目录：zip -r t.zip /usr/local/ 解压：unzip z.zip -d /usr/ -d 指定解压目录 压缩： gzip 文件 bzip2 文件 xz 文件 解压： gzip -d 文件 bzip2 -d 文件 xz -d 文件 或 unxz -d 文件 查看：zcat bzcat xcat 对比大小 ll -h t.tar* 进程管理命令pst和top使用方法 ps top 管理进程 ps为我们提供进程的一次性的查看，它所提供的查看结果并不动态连续的，如果想对进程时间监控，可以用top工具 ps监视进程工具 静态 当前状态 ps常用参数 -l 长格式输出 -u 按用户名和启动时间的顺序来显示进程 -f 用树形格式来显示进程 -a 显示所有用的所有进程 -r 显示运行中的进程 -e 显示所有进程，包括没有控制终端的进程 -x 显示没有控制终端的进程 -aux 常用，用BSD的格式显示进程 -ef 用标注格式显示进程 列出目前所有正在使用内存中的进程 ps -aux 进程属性 USER 进程所属用户 PID 进程ID PPID 父进程 %CPU 占用CPU百分比 %MEM 占用内存百分比 NI 进程的NICE值 优先级大小 VSZ 进程占用虚拟内存大小 RSS 固定内存使用数量 TYY 进程启动的终端ID STAT 进程的状态 R 正在运行中的 S 处于休眠状态 T 停止或被追踪 Z 僵尸进程 N 优先级较低的进程 L 有些页被缩进内存 s 进程的领导者 它下面有子进程 START 启动进程的时间 TIME 进程消耗CPu的时间 COMMAND 命令的名称和参数 top统计信息区前5行是系统整体的统计信息 kill和进程优先级管理 一个存放内存中的特殊目录 /proc 这个目录比较特殊，它并不在我们磁盘上，而在我们的内存中，当前系统运行的所有进程都动态的存放在这个目录]]></content>
+      <categories>
+        <category>linux</category>
+      </categories>
+      <tags>
+        <tag>linux</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2F2017%2F12%2F02%2FNginx%2F</url>
+    <content type="text"><![CDATA[软件开源协议 GPL BSD apache #]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[linux笔记]]></title>
+    <url>%2F2017%2F12%2F02%2Flinux03%2F</url>
+    <content type="text"><![CDATA[1U 服务器厚度 4.45cm 2路 2个物理CPU E系列CPU 至强CPU 1969Unix诞生 贝尔实验室 1972 C语言诞生 1973年 unix用c语言诞生 加州大学伯克莱 BSD unix 开源推广 unix 1990收费 1991 linux系统正式发布 理查德斯托曼 gun gun is not nuix 内核网址：www.kernel.org unix跑下坡路 小型机 不是开源 x86 稳定 集群 价格低 windows 易用 收费 RHCSA 安全专家 RHCE 工程师 RHCA 架构师 桥接模式 nat（地址转换模式） host-only模式 虚拟机无法访问外网命令 ifconfig ens33 192.168.123 systemctl restart network centOs7重启网卡 service network restart centOS6网卡重启 systemctl echo hello &gt; /dev/pts/2 wall “xxxx” tty type cat type pwd]]></content>
+      <categories>
+        <category>linux</category>
+      </categories>
+      <tags>
+        <tag>linux</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[hexo常用命令]]></title>
+    <url>%2F2017%2F11%2F30%2Fhexo%2F</url>
+    <content type="text"><![CDATA[hexonpm install hexo -g #安装 npm update hexo -g #升级 hexo init #初始化 简写hexo n &quot;我的博客&quot; == hexo new &quot;我的博客&quot; #新建文章 hexo p == hexo publish hexo g == hexo generate#生成 hexo s == hexo server #启动服务预览 hexo d == hexo deploy#部署 服务器hexo server #Hexo 会监视文件变动并自动更新，您无须重启服务器。 hexo server -s #静态模式 hexo server -p 5000 #更改端口 hexo server -i 192.168.1.1 #自定义 IP hexo clean #清除缓存 网页正常情况下可以忽略此条命令 hexo g #生成静态网页 hexo d #开始部署 监视文件变动hexo generate #使用 Hexo 生成静态文件快速而且简单 hexo generate --watch #监视文件变动 完成后部署两个命令的作用是相同的 hexo generate --deploy hexo deploy --generate hexo deploy -g hexo server -g 草稿hexo publish [layout] &lt;title&gt; 模版hexo new &quot;postName&quot; #新建文章 hexo new page &quot;pageName&quot; #新建页面 hexo generate #生成静态页面至public目录 hexo server #开启预览访问端口（默认端口4000，&apos;ctrl + c&apos;关闭server） hexo deploy #将.deploy目录部署到GitHub hexo new [layout] &lt;title&gt; hexo new photo &quot;My Gallery&quot; hexo new &quot;Hello World&quot; --lang tw 变量 描述layout 布局 title 标题 date 文件建立日期 title: 使用Hexo搭建个人博客 layout: post date: 2014-03-03 19:07:43 comments: true categories: Blog tags: [Hexo] keywords: Hexo, Blog description: 生命在于折腾，又把博客折腾到Hexo了。给Hexo点赞。 模版（Scaffold）hexo new photo &quot;My Gallery&quot; 变量 描述layout 布局 title 标题 date 文件建立日期 设置文章摘要以上是文章摘要 &lt;!--more--&gt; 以下是余下全文 写作hexo new page &lt;title&gt; hexo new post &lt;title&gt; 变量 描述:title 标题 :year 建立的年份（4 位数） :month 建立的月份（2 位数） :i_month 建立的月份（去掉开头的零） :day 建立的日期（2 位数） :i_day 建立的日期（去掉开头的零） 推送到服务器上hexo n #写文章 hexo g #生成 hexo d #部署 #可与hexo g合并为 hexo d -g]]></content>
+      <categories>
+        <category>hexo</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[linux目录结构]]></title>
     <url>%2F2017%2F11%2F29%2Flinux02%2F</url>
     <content type="text"><![CDATA[经典树形结构 /etc目录说明]]></content>
