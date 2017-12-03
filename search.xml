@@ -12,11 +12,6 @@
       </tags>
   </entry>
   <entry>
-    <title></title>
-    <url>%2F2017%2F12%2F02%2FNginx%2F</url>
-    <content type="text"><![CDATA[软件开源协议 GPL BSD apache #]]></content>
-  </entry>
-  <entry>
     <title><![CDATA[linux笔记]]></title>
     <url>%2F2017%2F12%2F02%2Flinux03%2F</url>
     <content type="text"><![CDATA[1U 服务器厚度 4.45cm 2路 2个物理CPU E系列CPU 至强CPU 1969Unix诞生 贝尔实验室 1972 C语言诞生 1973年 unix用c语言诞生 加州大学伯克莱 BSD unix 开源推广 unix 1990收费 1991 linux系统正式发布 理查德斯托曼 gun gun is not nuix 内核网址：www.kernel.org unix跑下坡路 小型机 不是开源 x86 稳定 集群 价格低 windows 易用 收费 RHCSA 安全专家 RHCE 工程师 RHCA 架构师 桥接模式 nat（地址转换模式） host-only模式 虚拟机无法访问外网命令 ifconfig ens33 192.168.123 systemctl restart network centOs7重启网卡 service network restart centOS6网卡重启 systemctl echo hello &gt; /dev/pts/2 wall “xxxx” tty type cat type pwd]]></content>
